@@ -20,6 +20,7 @@ RUN apk add --no-cache jq findutils && \
 COPY rootfs /
 
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1 \
+    NICE_ADJUSTMENT= \
     RCLONE_CONFIG=/config/rclone.conf \
     UPDATE_TRACKERS=true \
     CUSTOM_TRACKER_URL= \
